@@ -1,0 +1,8 @@
+# backend/requirements.txt
+Flask~=2.2
+SQLAlchemy~=1.4
+pymysql
+requests
+cbsodata
+python-dotenv
+flask-cors

@@ -1,0 +1,24 @@
+# frontend/index.html
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Farmacie Demo</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<style> #map{height:90vh;width:100%} </style>
+</head>
+<body>
+<h2>Farmacie Map</h2>
+<div id="map"></div>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+const map = L.map('map').setView([52.1, 5.1], 7);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+
+fetch('/api/v1/ping')
+.then(r => r.json())
+.then(console.log)
+</script>
+</body>
+</html>
